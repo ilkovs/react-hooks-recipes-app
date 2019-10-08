@@ -1,0 +1,94 @@
+.App {
+    text-align: center;
+    margin: auto;
+
+    .header {
+      background: #b83939;
+      color: #fff;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .searchbar {
+      margin: 40px 0;
+      
+      input {
+        padding: 10px;
+        border: 1px solid #32a4c7;
+        font: 400 16px 'Open Sans';
+        border-right: 0;
+      }
+
+      .searchField {
+        max-width: 600px;
+        width: 100%;
+
+        @media (max-width: 701px) {
+          width: auto;
+        }
+      }
+
+      .search {
+        background: #32a4c7;
+        color: #fff;
+        font: 600 16px 'Open Sans';
+        border: 0;
+        padding: 11px;
+      }
+
+    }
+
+    .results {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+
+        @media (min-width: 1440px) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media (max-width: 701px) {
+          grid-template-columns: 1fr;
+        }
+
+        li {
+          list-style: none;
+          margin: 20px;
+          box-shadow: 0 0 3px #303030;
+          text-decoration: none;
+
+          a {
+            text-decoration: none;
+            color: #303030;
+          }
+
+          .instructions {
+            text-decoration: underline;
+            color: #b83939;
+            width: 100%;
+          }
+
+          .view {
+            border: 1px solid #303030;
+            margin: 10px;
+            background: green;
+            border: 0;
+            padding: 5px;
+            color: #fff;
+            font: 400 16px 'Open Sans';
+            cursor: pointer;
+          }
+
+          .ingredients {
+            padding: 0 10px;
+            li {
+              box-shadow: none;
+              list-style: circle;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+}
